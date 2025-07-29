@@ -17,7 +17,6 @@ import java.time.LocalDateTime;
 /**
  * @EntityListeners(AuditingEntityListener.class) JPA가 엔티티의 생명주기 이벤트를 감지하여 자동으로 감사 정보를 처리하도록 등록
  */
-
 @Table(name = "board")
 @Entity
 @Getter
@@ -71,7 +70,6 @@ public class Board {
 
     // 접근 권한 체크
     public boolean canAccess(Role userRole) {
-
         switch (this.boardType) {
             case BOARD_PUBLIC:
                 return true;
